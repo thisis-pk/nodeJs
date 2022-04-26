@@ -1,32 +1,10 @@
-// const gameType = require('./game.js');
-// const gameBall = require('./ball.js');
+console.log("Hello");
+const read = require('./readFile.js');
+const write = require('./writeFile.js');
+const val = require('./express/app.js');
+const express = require('express');
 
+// read.readFiles('./docs');
+// write.write('./docs' , "Prabhu");
 
-// gameType.footBall(gameBall.volBall);
-// console.log("End");
-
-const fs = require('fs');
-const docs = fs.readdir('./docs' , (err , data) => {
-    if(err){
-        console.log("Error Message");
-    }else{
-        console.log(data)
-    }
-});
-console.log("One");
-wait(5000, "Two");
-console.log("Three");
-
-function wait (time, message) {
-    setTimeout(() => {
-        console.log(message)}, time)
-}
-
-const fileread = fs.readFile('./docs/xyz.txt', 'utf-8', function(err , data){
-    if(err){
-        console.log("Error message");
-    }else{
-        console.log(data);
-    }
-})
-console.log("File Read");
+val.app.listen();
